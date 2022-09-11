@@ -1,44 +1,48 @@
 import * as React from 'react';
-import {Box, Checkbox, FormControlLabel, FormGroup, Link} from '@mui/material';
+import {Grid, Checkbox, FormControlLabel, FormGroup, Link, Paper} from '@mui/material';
 import { Link as RouterLink } from "react-router-dom";
 
 function Choice() {
-    return (<Box
-                sx={{
-                    height:'100%',
-                    backgroundColor: 'beige',
-                }}>
-                <h1
-                    sx={{
-                        border:'1px solid black'
-                    }}>What nutrients are you trying to cut back on?
+    return (<Grid
+                container direction="column"
+                justifyContent="center"
+                alignItems="center">
+
+                <h1>What nutrients are you trying to cut back on?
                     </h1>
-                <Box
+                <Paper
+                    elevation={1}
                     sx={{
                         display:'flex',
                         justifyContent:'center'
                     }}>
-                        <FormGroup>
+                        <FormGroup
+                            sx={{
+                                margin:'20px'
+                            }}>
                             <FormControlLabel control={<Checkbox />} label="Sodium" />
-                            <FormControlLabel control={<Checkbox />} label="Saturated Fat" />
+                            <FormControlLabel control={<Checkbox />} label="Fat" />
                         </FormGroup>
-                        <FormGroup>
+                        <FormGroup
+                            sx={{
+                                margin:'20px'
+                            }}>
                             <FormControlLabel control={<Checkbox />} label="Sugar" />
-                            <FormControlLabel control={<Checkbox />} label="Cholesterol" />
+                            <FormControlLabel control={<Checkbox />} label="Carbohydrates" />
                         </FormGroup>
-                </Box>
+                </Paper>
                 <Link
                             sx={{
                                 alignText:"center",
                                 margin:"10px"
                             }}
                             to="/search" 
-                            color="secondary" 
+                            color="primary" 
                             component={RouterLink} 
-                            underline="none">
-                                Move to Search Page
+                            underline="hover">
+                                Confirm Selections
                         </Link>
-            </Box>
+            </Grid>
     );
 }
 

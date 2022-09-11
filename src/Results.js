@@ -1,12 +1,29 @@
 import * as React from 'react';
-import Link from '@mui/material/Link';
-import { Link as RouterLink } from "react-router-dom";
+import { Button, Grid } from '@mui/material';
+import { Link } from "react-router-dom";
 
 function Results() {
-    return <div style={{borderCollapse: "separate", borderRadius:"50%"}}>
-                <Link to="/search" color="primary" component={RouterLink} underline="none" style={{border:"black"}}>Click Here to Make Another Search</Link>
-                <Link to="/choice" color="secondary" component={RouterLink} underline="none">Click Here to Change Nutritional Choices</Link>
-            </div>
+    return <Grid
+                sx={{ flexGrow: 1 }}
+                container direction="column"
+                mt="20px"
+                rowGap={"10px"}
+                justifyContent="center"
+                alignItems="center">
+                <Button 
+                    variant="contained" 
+                    component={Link} 
+                    to='/choice'
+                    underline="none">Click Here to Make Another Search
+                </Button>
+                <Button 
+                    variant="contained" 
+                    component={Link} 
+                    to='/choice'
+                    underline="none"
+                    color="secondary">Return to Nutritional Preferences
+                </Button>
+            </Grid>
 }
 
 export default Results;

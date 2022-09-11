@@ -1,4 +1,4 @@
-import Demo from './Demo';
+import Welcome from './Welcome';
 import './App.css';
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Choice from './Choice';
@@ -9,7 +9,7 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Demo />}></Route>
+        <Route path="/" element={<Welcome />}></Route>
         <Route path="/choice" element={<Choice />}></Route>
         <Route path="/search" element={<Search />}></Route>
         <Route path="/results" element={<Results />}></Route>
