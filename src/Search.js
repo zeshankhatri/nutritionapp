@@ -9,7 +9,7 @@ function Search() {
                 justifyContent="center"
                 alignItems="center">
 
-                <h1>What nutrients are you trying to cut back on?
+                <h1>Enter an ingredient to find potential replacements:
                     </h1>
                 <Paper
                     elevation={1}
